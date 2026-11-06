@@ -1,0 +1,26 @@
+column_name,data_type,description,project_mapping
+business_code,str,Business entity code,Supporting attribute / not separately mapped
+cust_number,str,Customer identifier,Customer ID
+name_customer,str,Customer name,Customer name
+clear_date,datetime64[us],Actual payment/clearing date,Actual payment date (historical outcome)
+buisness_year,float64,Business year (source spelling retained),Supporting attribute / not separately mapped
+doc_id,float64,Document identifier,Invoice/document ID
+posting_date,datetime64[us],Invoice posting date,Invoice posting date (chosen date anchor)
+document_create_date,datetime64[us],Document creation date,Supporting attribute / not separately mapped
+document_create_date.1,datetime64[us],Additional document creation date field,Supporting attribute / not separately mapped
+due_in_date,datetime64[us],Invoice due date,Due date
+invoice_currency,str,Invoice currency,Currency
+document type,str,Document type,Supporting attribute / not separately mapped
+posting_id,float64,Posting identifier,Supporting attribute / not separately mapped
+total_open_amount,float64,Invoice amount/open amount field as supplied by source,Invoice amount
+baseline_create_date,datetime64[us],Baseline date,Supporting attribute / not separately mapped
+cust_payment_terms,str,Customer payment terms,Payment terms
+invoice_id,float64,Invoice identifier; six values are missing,Invoice ID
+isOpen,int64,"Original status: 1 = open, 0 = paid",Supporting attribute / not separately mapped
+days_to_pay,float64,Days between posting date and clearing date,Payment duration target
+delay,float64,Days between due date and clearing date,Payment delay target
+paid_late,Int64,"1 = paid late, 0 = paid on time/early, NA = unpaid",Late-payment classification target
+open_paid_flag,int64,"1 = paid, 0 = open",Paid/open status target
+flag_due_before_posting,int64,1 if due date precedes posting date,Supporting attribute / not separately mapped
+flag_clear_before_baseline,int64,1 if clearing date precedes baseline date,Supporting attribute / not separately mapped
+flag_posting_before_document,int64,1 if posting date precedes document creation date,Supporting attribute / not separately mapped

@@ -1,0 +1,8 @@
+issue,action_taken,reason,rows_affected_or_fields
+Fully empty column,Removed area_business,Column contained no usable values,50000
+Exact duplicate records,Removed 1161 exact duplicate rows,Avoid duplicate counting while retaining non-identical records,1161
+Missing clear_date,Retained missing values for open invoices,No actual payment date exists yet; do not invent an outcome,9681
+Missing invoice_id,Retained records with missing invoice_id,Rows remain otherwise valid and have document identifiers,6
+Date conversion,Parsed six source date columns into datetime,Ensure correct date arithmetic and date validation,6
+Payment targets,"Created days_to_pay, delay, paid_late and open_paid_flag",Represent historical payment outcomes; open invoices remain unlabeled for paid_late,4
+Date anomalies,Retained unusual date relationships and created flags,Preserve source data while making anomalies reviewable,3665
